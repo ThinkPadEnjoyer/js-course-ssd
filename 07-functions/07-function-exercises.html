@@ -7,7 +7,7 @@
 </head>
 <body>
   <script>
-    function greeting(name) {
+    function greeting(name) { // 7a - 7c
       if (!!name) { // double NOT operator flips the boolean value twice and checks to see if its true or false
         console.log(`Hello ${name}!`);
       } else {
@@ -19,7 +19,36 @@
     greeting('Simon');
     greeting();
 
+    function convertToFahrenheit(celsius) { // 7d - 7f
+      fahrenheit = Math.round((celsius * 9/5) + 32) + 'F';
+      return fahrenheit;
+    }
 
+    convertToFahrenheit(25);
+    console.log(fahrenheit);
+
+    function convertToCelsius(fahrenheit) {
+      celsius = Math.round((fahrenheit - 32) * 5/9) + 'C';
+      return celsius;
+    }
+
+    convertToCelsius(86);
+    console.log(celsius);
+
+    function convertTemperature(degrees, unit) {
+      if (unit === 'C') {
+        convertToFahrenheit(degrees);
+        console.log(fahrenheit);
+      } else if (unit === 'F') {
+        convertToCelsius(degrees)
+        console.log(celsius);
+      }
+    }
+
+    convertTemperature(25, 'C');
+    convertTemperature(1040, 'F');
+
+    
   </script>
 
 
