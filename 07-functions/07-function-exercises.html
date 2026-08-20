@@ -48,7 +48,37 @@
     convertTemperature(25, 'C');
     convertTemperature(1040, 'F');
 
-    
+    function convertLength(length, from, to) {
+      if (from === 'miles' && to === 'km') {
+        result = Math.round(length * 1.6) + ' km';
+        console.log(result);
+      } else if (from === 'km' && to === 'miles') {
+        result = Math.round(length / 1.6) + ' miles';
+        console.log(result);
+      } else if (from === 'miles' && to === 'ft') {
+        result = Math.round(length * 5280) + ' ft';
+        console.log(result);
+      } else if (from === 'ft' && to === 'miles') {
+        result = Math.round(length / 5280) + ' miles';
+        console.log(result);
+      } else if (from === 'km' && to === 'ft') {
+        result = Math.round(length * 3281) + ' ft';
+        console.log(result);
+      } else if (from === 'ft' && to === 'km') {
+        result = Math.round(length / 3281) + ' km';
+        console.log(result);
+      } else {
+        console.log('Please use miles, ft, or km. Conversion of same units unsupported.');
+      }
+    }
+
+    convertLength(50, 'miles', 'km');
+    convertLength(32, 'km', 'miles');
+    convertLength(5, 'km', 'km');
+
+    convertLength(5, 'miles', 'km');
+    convertLength(5, 'miles', 'ft');
+    convertLength(5, 'km', 'ft');
   </script>
 
 
