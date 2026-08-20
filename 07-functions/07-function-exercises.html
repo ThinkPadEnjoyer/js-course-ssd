@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions Exercises</title>
+</head>
+<body>
+  <script>
+    function greeting(name) {
+      if (!!name) { // double NOT operator flips the boolean value twice and checks to see if its true or false
+        console.log(`Hello ${name}!`);
+      } else {
+        console.log('Hi there!');
+      }
+    }
+
+    greeting('Kaleb');
+    greeting('Simon');
+    greeting();
+
+
+  </script>
+
+
+</body>
+</html>
