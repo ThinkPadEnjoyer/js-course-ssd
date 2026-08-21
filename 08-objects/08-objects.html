@@ -49,7 +49,9 @@
 
     //JSON means JavaScript Object Notation, similar syntax to objects, but has less features. JSON is more universal than JS, use JSON when sending data between computers. As well as storing data.
 
-    console.log(JSON.stringify(product2));
+    console.log(JSON.stringify(product2)); // converts an object into JSON.
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
 
 
   </script>
